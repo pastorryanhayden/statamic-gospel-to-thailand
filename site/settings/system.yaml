@@ -3,7 +3,7 @@ locales:
   en:
     full: en_US
     name: English
-    url: "{env:DOMAIN}"
+    url: gospeltothailand.com
 timezone: America/Chicago
 license_key: cd82f132-5063-46eb-a09a-bfa0e9ed6c67
 date_format: F jS, Y
