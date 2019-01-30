@@ -1,0 +1,95 @@
+taxonomies: false
+title: Newsletter
+create_title: ""
+hide: true
+fields:
+  main_styles_and_images:
+    type: section
+    display: Main Styles and Images
+  use_logo_in_header:
+    type: toggle
+    display: Use Logo In Header
+  header_title:
+    type: text
+    display: Header Title
+    show_when:
+      use_logo_in_header: false
+  header_subtitle:
+    type: text
+    display: Header Subtitle
+    show_when:
+      use_logo_in_header: false
+  logo:
+    type: assets
+    display: Logo
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+    mode: grid
+    show_when:
+      use_logo_in_header: true
+  header-img:
+    type: assets
+    display: Header Image
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+  header-overlay:
+    type: toggle
+    display: Header Overlay
+    width: 50
+  header-overlay-opacity:
+    type: text
+    display: Header Overlay Opacity
+    instructions: This needs to be a decimal (i.e. .5)
+    width: 50
+    show_when:
+      header-overlay: true
+  missionary-img:
+    type: assets
+    display: Missionary Image
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+  missionsCoard-logo:
+    type: assets
+    display: Missions Board Logo
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+  colors_and_other_styles:
+    type: section
+    display: Colors and Other Styles
+    instructions: Ryan will probably do these for you, change at your own risk.
+  header-height:
+    type: text
+    display: Header Height
+    instructions: 'In ems.  I.e. 9.8em'
+    default: 9.8em
+  colors:
+    type: array
+    display: Colors
+    keys:
+      dark: Dark
+      white: White
+      primary: Primary
+      secondary: Secondary
+    instructions: 'These are CSS hex color styles (i.e. `#FFFFFF`)'
+  radius:
+    type: text
+    display: Radius
+    instructions: In pixels, i.e. `5px`
+    default: 5px
+  font:
+    type: text
+    display: Font
+    instructions: CSS Style. I.e. `Helvetica, Arial, sans-serif`
+    default: Helvetica, Arial, sans-serif
+  extra-info:
+    type: textarea
+    display: Extra Info
+    instructions: 'Optional: just a place to store some extra info on your newsletter.'

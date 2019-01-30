@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'scw-icons';
+  src:  url('../fonts/scw-icons.eot?p7tw6a');
+  src:  url('../fonts/scw-icons.eot?p7tw6a#iefix') format('embedded-opentype'),
+    url('../fonts/scw-icons.ttf?p7tw6a') format('truetype'),
+    url('../fonts/scw-icons.woff?p7tw6a') format('woff'),
+    url('../fonts/scw-icons.svg?p7tw6a#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'scw-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-alchohol:before {
+  content: "\e900";
+}
+.icon-altar:before {
+  content: "\e901";
+}
+.icon-baby:before {
+  content: "\e902";
+}
+.icon-baptism-alt:before {
+  content: "\e903";
+}
+.icon-baptism:before {
+  content: "\e904";
+}
+.icon-bible-alt:before {
+  content: "\e905";
+}
+.icon-bible:before {
+  content: "\e906";
+}
+.icon-church-alt:before {
+  content: "\e907";
+}
+.icon-church:before {
+  content: "\e908";
+}
+.icon-cross-alt:before {
+  content: "\e909";
+}
+.icon-cross:before {
+  content: "\e90a";
+}
+.icon-danger:before {
+  content: "\e90b";
+}
+.icon-death:before {
+  content: "\e90c";
+}
+.icon-divorce:before {
+  content: "\e90d";
+}
+.icon-error:before {
+  content: "\e90e";
+}
+.icon-family-alt:before {
+  content: "\e90f";
+}
+.icon-family:before {
+  content: "\e910";
+}
+.icon-fire:before {
+  content: "\e911";
+}
+.icon-future:before {
+  content: "\e912";
+}
+.icon-gender:before {
+  content: "\e913";
+}
+.icon-gift:before {
+  content: "\e914";
+}
+.icon-giving:before {
+  content: "\e915";
+}
+.icon-globe:before {
+  content: "\e916";
+}
+.icon-government:before {
+  content: "\e917";
+}
+.icon-law:before {
+  content: "\e918";
+}
+.icon-lock:before {
+  content: "\e919";
+}
+.icon-lords-supper:before {
+  content: "\e91a";
+}
+.icon-man:before {
+  content: "\e91b";
+}
+.icon-manger:before {
+  content: "\e91c";
+}
+.icon-marriage-alt:before {
+  content: "\e91d";
+}
+.icon-marriage:before {
+  content: "\e91e";
+}
+.icon-missions:before {
+  content: "\e91f";
+}
+.icon-poison:before {
+  content: "\e920";
+}
+.icon-prayer-alt:before {
+  content: "\e921";
+}
+.icon-prayer:before {
+  content: "\e922";
+}
+.icon-preaching:before {
+  content: "\e923";
+}
+.icon-salvation-alt:before {
+  content: "\e924";
+}
+.icon-salvation:before {
+  content: "\e925";
+}
+.icon-serpent:before {
+  content: "\e926";
+}
+.icon-service:before {
+  content: "\e927";
+}
+.icon-shield:before {
+  content: "\e928";
+}
+.icon-spirit:before {
+  content: "\e929";
+}
+.icon-timeline:before {
+  content: "\e92a";
+}
+.icon-trinity:before {
+  content: "\e92b";
+}

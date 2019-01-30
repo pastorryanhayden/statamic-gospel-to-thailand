@@ -1,0 +1,21 @@
+// Roboto for text regular (400) and bold (700)
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+
+$text-font: 'Roboto', sans-serif;
+$main-font: 'Roboto', sans-serif;
+$script-font: 'Kaushan Script', cursive;
+
+* {
+	font-family: $main-font;
+}
+
+.text {
+	font-family: $text-font;
+
+}
+
+h1 {
+	font-family: $script-font;
+}

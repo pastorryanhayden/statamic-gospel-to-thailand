@@ -1,0 +1,277 @@
+{{collection:updates}}
+{{if id == update_id}}
+<!DOCTYPE html>
+<html lang="{{ newsletter_settings:lang | default: site.lang | default: "en" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{title}}</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 10pt;
+            font-family: {{newsletter_settings:font}};
+        }
+        *{
+                line-height: 1.3em;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact
+        }
+        @page :first {
+        margin: 0 0 2em;
+        }
+            @page {
+                size: 8.5in 11in;
+                margin: 2em 0 0em;
+            }
+            .page {
+                position: relative;
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+            @media only print{
+                *{
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact
+                }
+            }
+            @media only screen{
+                *{
+                    text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+                }
+                body{
+                    margin: 2em;
+                    background-color: #4B4B4B;
+                    color: #3b3b3b;
+                }
+                .page{
+                    background-color: #ffffff;
+                    width: 8.5in;
+                    min-height: 11in;
+                    margin: 0 auto 2em;
+                    padding: 0;
+                    box-sizing: border-box;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+                }
+        }
+        main img{
+        float: left;
+        max-width: 100%;
+                margin: 0 1em 0.5em 0;
+                border-radius: {{newsletter_settings:radius}};
+        }
+	</style>
+</head>
+<body>
+	<div class="page">
+		<!-- Header image -->
+		<div style="
+		width: 100%;
+		height: {{newsletter_settings:header-height}};
+		overflow: hidden;
+		position: absolute">
+			{{ if newsletter_settings:header-img }}
+			<img src="{{newsletter_settings:header-img}}" style="
+				display: block;
+				width: 100%">
+			{{ if newsletter_settings:header-overlay }}
+			<span style="
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			background-color: {{newsletter_settings:colors.primary}};
+			opacity: {{newsletter_settings:header-overlay-opacity}};
+			-webkit-print-color-adjust: exact"></span>
+			{{endif}}
+			{{else}}
+			<span style="
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: calc(33.33% + 2em);
+			width: 60%;
+			height: 0.25em;
+			background: linear-gradient(to right, {{newsletter_settings:colors.primary}}, rgba(0,0,0,0));"></span>
+			{{endif}}
+		</div>
+		<!-- /Header image -->
+
+		<div style="position: relative;
+			padding: 0 2em 1.75em">
+
+      <aside style="
+      font-size: 0.9em;
+      float: left;
+      width: 33.33%;
+      margin: 1.75em 2em 0 0">
+
+				<!-- List of Addresses -->
+				<img src="{{newsletter_settings:missionary-img}}" style="
+				display: block;
+				width: 100%;
+				border-radius: {{newsletter_settings:radius}} {{newsletter_settings:radius}} 0 0;
+				margin: 0;">
+				<div style="
+					margin: 0 0 1em;
+					padding: 0.1em 1em;
+					{{ if newsletter_settings:missionary-img }}
+					border-radius: 0 0 {{newsletter_settings:radius}} {{newsletter_settings:radius}};
+					{{else}}
+					border-radius: {{newsletter_settings:radius}};
+					{{endif}}
+					background-color: {{newsletter_settings:colors.secondary}};
+					-webkit-print-color-adjust: exact;
+					color: {{newsletter_settings:colors.white}}">
+          {{ if contact_settings:support_address }}
+          <dl>
+						<dt style="font-weight: 700">Support Address</dt>
+  					<dd style="padding: 0; margin: 0 0 0.75em">{{contact_settings:support_address}}</dd>
+          </dl>
+          {{endif}}
+          {{ if contact_settings:sending_church }}
+          <dl>
+						<dt style="font-weight: 700">Sending Church</dt>
+  					<dd style="padding: 0; margin: 0 0 0.75em">{{contact_settings:sending_church}}</dd>
+          </dl>
+          {{endif}}
+          {{ if contact_settings:contact_directly }}
+          <dl>
+						<dt style="font-weight: 700">Field Address</dt>
+  					<dd style="padding: 0; margin: 0 0 0.75em">{{contact_settings:contact_directly}}</dd>
+          </dl>
+          {{endif}}
+				</div>
+				<!-- /List of Addresses -->
+
+        {{ if prayer_requests }}
+				<!-- Monthly Prayer Requests -->
+				<div style="padding: 1em">
+					<strong> Monthly Prayer Requests </strong>
+					<ul style="padding: 0 1em;">
+              {{ prayer_requests }}
+						<li style="padding: 0 0 0.5em">{{value}}</li>
+						{{ /prayer_requests }}
+					</ul>
+				</div>
+        <!-- /Monthly Prayer Requests -->
+        {{/if}}
+
+				<!-- Optional Text -->
+        {{ if newsletter_settings:extra-info }}
+        <div style="font-weight: 700;
+        padding: 0 1em">
+          <p>{{newsletter_settings:extra-info}}</p>
+        </div>
+        {{/if}}
+				<!-- /Optional Text -->
+
+      </aside>
+
+      <!-- Logo -->
+      <header style="
+      display: flex;
+      align-content: center;
+      align-items: center;
+      height: {{newsletter_settings:header-height}}">
+        {{ if newsletter_settings:logo }}
+          <img src="{{newsletter_settings:logo}}" alt="{{title}}" style="
+          display: block;
+          height: 52px;
+          margin: 0 auto">
+        {{else}}
+          <h1 style="
+          margin: 0.5em 0 0;
+          color: {{ if newsletter_settings:header-img }}{{newsletter_settings:colors.white}}{{/if }};
+					-webkit-print-color-adjust: exact;
+          font-weight: 400;">
+            <span style="
+            display: block;
+            font-size: 0.5em;">{{newsletter_settings:header_subtitle}}</span>
+            {{newsletter_settings:header_title}}
+          </h1>
+        {{/if}}
+      </header>
+      <!-- /Logo -->
+
+      <!-- Main Content -->
+      <main style="">
+          {{ body }}
+
+          {{ if type == "text" }}
+
+          <div class="text">
+            {{ text }}
+          </div>
+          {{ elseif type=="featured_image"}}
+
+          <span class="image main filtered"><img src="{{image}}" alt="" /></span>
+
+          {{ elseif type == "picture" }}
+              {{if picture_type == "full"}}
+              <span class="image fit"><img src="{{picture}}" alt="" /></span>
+              {{elseif picture_type == "left"}}
+              <span class="image left"><img src="{{picture}}" alt="" /></span>
+              {{elseif picture_type == "right"}}
+              <span class="image right"><img src="{{picture}}" alt="" /></span>
+              {{else}}
+              <span class="image" style="width: 100%; margin-left: auto; margin-right: auto; display: block; margin-bottom: 30px;"><img src="{{picture}}" alt="" style="display: block; max-width: 60%; margin-left: auto; margin-right: auto;"/></span>
+              {{/if}}
+          {{ elseif type == "two_up"}}
+          {{two_up_grid}}
+          <div class="6u 12u$(medium)">
+          <h3>{{heading}}</h3>
+          <span class="image fit"><img src="{{image}}" alt="" /></span>
+          {{body_text}}
+          </div>
+              {{/two_up_grid}}
+      {{ /if }}
+
+          {{ /body }}
+      </main>
+      <!-- /Main Content -->
+
+      <!-- footer -->
+      <footer style="
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0.5em 0 1em;
+      border-bottom: 1px solid #000">
+
+       <img src="{{glide:newsletter_settings:missionsCoard-logo height="65" width="300" fit="contain" }}" alt="">
+
+          {{ if contact_settings:phone_number}}
+          <p style="margin: 0;
+          font-weight: 700">{{contact_settings:phone_number}}</p>
+          {{/if}}
+          {{ if contact_settings:email_address}}
+          <p style="margin: 0;
+          font-weight: 700">{{contact_settings:email_address}}</p>
+          {{/if}}
+          {{ if contact_settings:website_url}}
+          <p style="margin: 0;
+          font-weight: 700">{{contact_settings:website_url}}</p>
+          {{/if}}
+
+      </footer>
+      <!-- /footer -->
+		</div>
+	</div>
+</body>
+</html>
+{{/if}}
+{{/collection:updates}}

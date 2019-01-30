@@ -1,0 +1,180 @@
+taxonomies: false
+title: Page
+create_title: About Page
+fields:
+  description:
+    type: textarea
+    display: Description
+    instructions: This is a short paragraph for the home page.
+  body:
+    type: bard
+    display: body
+    container: main
+    folder: img
+    restrict_assets: true
+    sets:
+      picture:
+        display: picture
+        fields:
+          picture:
+            type: assets
+            display: picture_url
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+            mode: grid
+            width: 75
+          picture_type:
+            type: radio
+            display: picture_type
+            options:
+              full: full
+              regualr: regular
+              left: left
+              right: right
+            width: 25
+      featured_image:
+        display: featured_image
+        fields:
+          image:
+            type: assets
+            display: image
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+      two_up:
+        display: two up
+        fields:
+          two_up_grid:
+            type: grid
+            display: two_up_grid
+            fields:
+              heading:
+                type: text
+                display: heading
+              image:
+                type: assets
+                display: image
+                container: main
+                folder: img
+                restrict: true
+                max_files: 1
+              body_text:
+                type: redactor
+                display: body text
+            mode: stacked
+            max_rows: 2
+            min_rows: 2
+      beliefs:
+        display: Beliefs
+        fields:
+          belief:
+            type: replicator
+            display: belief
+            sets:
+              belief:
+                display: belief
+                fields:
+                  title:
+                    type: text
+                    display: title
+                  icon:
+                    type: suggest
+                    display: icon
+                    options:
+                      alchohol: alchohol
+                      altar: altar
+                      baby: baby
+                      baptism: baptism
+                      bible-alt: bible-alt
+                      bible: bible
+                      church-alt: church-alt
+                      church: church
+                      cross-alt: cross-alt
+                      cross: cross
+                      danger: danger
+                      death: death
+                      divorce: divorce
+                      error: error
+                      family-alt: family-alt
+                      family: family
+                      fire: fire
+                      future: future
+                      gender: gender
+                      gift: gift
+                      giving: giving
+                      globe: globe
+                      government: government
+                      law: law
+                      lock: lock
+                      lords-supper: lords-supper
+                      man: man
+                      manger: manger
+                      marriage: marriage
+                      marriage-alt: marriage-alt
+                      missions: missions
+                      poison: poison
+                      prayer: prayer
+                      prayer-alt: prayer-alt
+                      preaching: preaching
+                      salvation: salvation
+                      salvation-alt: salvation-alt
+                      serpent: serpent
+                      service: service
+                      shield: shield
+                      spirit: spirit
+                      timeline: timeline
+                      trinity: trinity
+                  body:
+                    type: redactor
+                    display: body
+                    settings: Basic
+                    container: main
+                    folder: img
+                    restrict_assets: true
+      video:
+        display: video_field
+        fields:
+          video_show:
+            type: video
+            display: Video
+            instructions: 'Paste a video URL here from Youtube, Vimeo, or other sources.  Our system will take care of displaying it.'
+      download:
+        display: download
+        fields:
+          heading:
+            type: text
+            display: heading
+          description:
+            type: textarea
+            display: description
+            instructions: 'This is optional.  Just a paragraph to describe the download.'
+          url:
+            type: assets
+            display: Download Item
+            container: main
+            folder: /
+            max_files: 1
+      featured_link:
+        display: featured link
+        fields:
+          heading:
+            type: text
+            display: heading
+          description:
+            type: textarea
+            display: description
+          url:
+            type: text
+            display: url
+      form:
+        display: form
+        fields:
+          form:
+            type: form
+            display: form
+  hide_from_main_menu:
+    type: toggle
+    display: Hide from main menu

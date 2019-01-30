@@ -1,0 +1,95 @@
+<section class="main">
+    <header class="invert accent2">
+        <h1>{{title}}</h1>
+        <p>{{ description }}</p>
+    </header>
+    <div class="row 200%">
+    {{ body }}
+
+    {{ if type == "text" }}
+
+    <div class="text">
+      {{ text }}
+    </div>
+    {{ elseif type=="featured_image"}}
+
+    <span class="image main filtered"><img src="{{image}}" alt="" /></span>
+
+    {{ elseif type == "picture" }}
+        {{if picture_type == "full"}}
+        <span class="image fit"><img src="{{picture}}" alt="" /></span>
+        {{elseif picture_type == "left"}}
+        <span class="image left"><img src="{{picture}}" alt="" /></span>
+        {{elseif picture_type == "right"}}
+        <span class="image right"><img src="{{picture}}" alt="" /></span>
+        {{else}}
+        <span class="image" style="width: 100%; margin-left: auto; margin-right: auto; display: block; margin-bottom: 30px;"><img src="{{picture}}" alt="" style="display: block; max-width: 60%; margin-left: auto; margin-right: auto;"/></span>
+        {{/if}}
+    {{ elseif type == "two_up"}}
+    {{two_up_grid}}
+    <div class="6u 12u$(medium)">
+    <h3>{{heading}}</h3>
+    <span class="image fit"><img src="{{image}}" alt="" /></span>
+    {{body_text}}
+    </div>
+        {{/two_up_grid}}
+    {{ elseif type == "beliefs"}}
+    <div class="beliefs">
+        {{belief}}
+    <div class="belief">
+    {{icon}}
+    <h3><i class="icon-{{value}}"></i> {{title}}</h3>
+    {{/icon}}
+    {{body}}
+    </div>
+        {{/belief}}
+    </div>
+    {{ elseif type == "video_field"}}
+    <div class="video">
+    {{ if video_show | is_embeddable }}
+        <!-- Youtube and Video -->
+        <iframe src="{{ video_show | embed_url }}"></iframe>
+        {{ else }}
+            <!-- Other HTML5 video types -->
+            <video src="{{ video_show | embed_url }}"></video>
+        {{ /if }}
+        <br>
+    </div>
+    {{ elseif type == "download"}}
+        <div class="wrapper dl">
+        <div class="download box">
+        <h3>{{heading}}</h3>
+        <p>{{description}}</p>
+        <a href="{{url}}" class="button icon special fa-download">Download</a>
+        </div>
+    </div>
+    {{ elseif type == "featured_link"}}
+        <div class="wrapper dl">
+        <div class="download box">
+        <h3>{{heading}}</h3>
+        <p>{{description}}</p>
+        <a href="{{url}}" class="button icon fa-link">Download</a>
+        </div>
+    </div>
+    {{ elseif type == "form"}}
+    <div class="wrapper dl">
+    <div class="form box">
+    {{ form:create in="contact-us" }}
+    <label>Name</label>
+    <input type="text" name="name" value="{{ old:name }}" />
+
+    <label>email</label>
+    <input type="email" name="email" value="{{ old:email }}" />
+
+    <label>Your Message</label>
+    <textarea name="message">{{ old:message }}</textarea>
+    <input type="submit" value="Submit">
+
+    {{ /form:create }}
+    </div>
+    </div>
+{{ /if }}
+
+    {{ /body }}
+    </div><!--/row 200%-->
+</section>

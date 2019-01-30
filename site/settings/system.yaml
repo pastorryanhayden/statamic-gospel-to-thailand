@@ -1,0 +1,46 @@
+app_key: lpykzzjWevtG2BHv6hCbWIi2kMIozICD
+locales:
+  en:
+    full: en_US
+    name: English
+    url: "{env:DOMAIN}"
+timezone: America/Chicago
+license_key: cd82f132-5063-46eb-a09a-bfa0e9ed6c67
+date_format: F jS, Y
+default_extension: md
+send_powered_by_header: true
+ensure_unique_ids: false
+filesystems:
+  content:
+    driver: local
+    root: site/content
+  storage:
+    driver: local
+    root: site/storage
+  users:
+    driver: local
+    root: site/users
+  themes:
+    driver: local
+    root: site/themes
+    url: /site/themes
+redactor:
+  -
+    name: Standard
+    settings:
+      buttons:
+        - formatting
+        - bold
+        - italic
+        - link
+        - unorderedlist
+        - orderedlist
+        - html
+  -
+    name: Basic
+    settings:
+      buttons:
+        - bold
+        - italic
+csrf_exclude: [ ]
+php_max_memory_limit: null

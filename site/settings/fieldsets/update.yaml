@@ -1,0 +1,33 @@
+taxonomies: false
+title: Update
+create_title: ""
+hide: true
+fields:
+  date:
+    type: date
+    display: Date
+    earliest_date: January 1, 2008
+    format: d M Y
+    width: 25
+  featured_image:
+    type: assets
+    display: featured image
+    container: main
+    folder: img
+    max_files: 1
+  short_description:
+    type: textarea
+    display: Short Description
+    instructions: A sentance or two to display on the home page and lists.
+  body:
+    type: bard
+    display: Body
+    sets:
+      set_1:
+        display: Set 1
+    container: main
+    folder: img
+    restrict_assets: true
+  prayer_requests:
+    type: list
+    display: prayer requests

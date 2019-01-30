@@ -1,0 +1,24 @@
+d7f606b7-0968-42e2-a92c-beeadb8725ea:
+  title: editor
+  slug: editor
+  permissions:
+    - cp:access
+    - content:view_drafts_on_frontend
+    - pages:view
+    - pages:edit
+    - pages:create
+    - pages:delete
+    - pages:reorder
+    - collections:updates:view
+    - collections:updates:edit
+    - collections:updates:create
+    - collections:updates:delete
+    - globals:contact_settings:view
+    - globals:contact_settings:edit
+    - globals:social_links:view
+    - globals:social_links:edit
+    - assets:main:view
+    - assets:main:edit
+    - assets:main:create
+    - assets:main:delete
+    - forms

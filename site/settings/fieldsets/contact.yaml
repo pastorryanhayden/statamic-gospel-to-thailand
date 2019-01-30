@@ -1,0 +1,25 @@
+taxonomies: false
+title: Contact Information
+create_title: ""
+fields:
+  support_address:
+    type: textarea
+    display: Support Address
+    instructions: 'Seperate lines with `</br>`'
+  sending_church:
+    type: textarea
+    display: Sending Church
+    instructions: 'Seperate lines with `</br>`'
+  contact_directly:
+    type: textarea
+    display: Contact Directly
+    instructions: 'Seperate lines with `</br>`'
+  phone_number:
+    type: text
+    display: Phone Number
+  email_address:
+    type: text
+    display: Email Address
+  website_url:
+    type: text
+    display: Website URL

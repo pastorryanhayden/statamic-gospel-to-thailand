@@ -1,0 +1,17 @@
+title: Contact Us
+fields:
+  name:
+    display: your name
+  email:
+    display: your email
+  message:
+    display: message
+columns:
+  - name
+  - email
+  - message
+email:
+  - 
+    to: ahmethernandez@gmail.com
+    reply_to: ahmethernandez@gmail.com
+    subject: A new submission from GospelToThailand.com

@@ -1,0 +1,54 @@
+section.connect
+    background: #201A44
+    color: $orange
+    // padding: 10px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    +tablet
+        height: 125px
+        flex-wrap: nowrap
+    div.social
+        width: 100%
+        padding: 10px
+        border-bottom: 1px solid $orange
+        margin-bottom: 20px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        +tablet
+            max-width: 450px
+            width: 33%
+            border-right: 1px solid $orange
+            border-bottom: none
+            height: 125px
+            margin-bottom: 0
+        h3
+            font-weight: 400
+            text-align: center
+        ul
+            display: flex
+            list-style-type: none
+            padding-left: 0
+            margin-left: 0
+            justify-content: space-around
+            align-items: center
+            width: 300px
+
+    div.quick-links
+        width: 100%
+        padding: 10px
+        +tablet
+            width: 77%
+            height: 125px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        text-align: center
+        a
+            max-width: 115px
+            text-decoration: none
+            color: $orange
+            span
+                margin-top: 10px

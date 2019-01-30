@@ -1,0 +1,21 @@
+taxonomies: false
+title: Social Links
+create_title: soclial_links
+hide: true
+fields:
+  facebook_url:
+    type: text
+    display: Facebook URL
+    width: 25
+  twitter_url:
+    type: text
+    display: Twitter URL
+    width: 25
+  youtube_url:
+    type: text
+    display: Youtube URL
+    width: 25
+  instagram_url:
+    type: text
+    display: Instagram URL
+    width: 25

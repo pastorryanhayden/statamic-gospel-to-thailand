@@ -1,0 +1,18 @@
+use_logo_in_header: false
+header_title: Hernandez Family
+header_subtitle: Missionaries to Thailand
+header-img: /assets/img/thailandHero.png
+header-overlay: false
+missionary-img: /assets/img/ahmet.jpg
+missionsCoard-logo: /assets/img/BIMIlogoBlue.jpg
+header-height: 9.8em
+colors:
+  dark: '#010101'
+  white: '#ffffff'
+  primary: '#00288F'
+  secondary: '#B72530'
+radius: 5px
+font: Helvetica, Arial, sans-serif
+fieldset: Newsletter
+title: Newsletter Settings
+id: caf70cdb-2535-4a19-8c2a-ae6089b42fb5

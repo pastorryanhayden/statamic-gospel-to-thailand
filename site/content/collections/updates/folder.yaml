@@ -1,0 +1,5 @@
+template: update
+show_comments: false
+title: Updates
+fieldset: update
+order: date

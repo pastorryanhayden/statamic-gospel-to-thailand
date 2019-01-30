@@ -1,0 +1,28 @@
+<section class="main">
+        <header class="invert accent2">
+                <h1>{{title}}</h1>
+                <p>{{ short_description }}</p>
+            </header>
+            <div class="row 200%">
+
+    {{ collection:updates group_by_date="Y" as="posts" }}
+
+        {{ if no_results }}
+            <p>Aww, there are no results.</p>
+        {{ /if }}
+
+        {{ date_groups}}
+        <div class="date-group">
+        <h3>{{ date_group }}</h3>
+        <ul>
+                {{ posts }}
+                    <li><a href="{{url}}">{{title}}</a></li>
+                {{ /posts }}
+        </ul>
+        </div><!--date-group-->
+        {{ /date_groups}}
+
+
+    {{ /collection:updates }}
+    </div><!--row 200%-->
+</section>

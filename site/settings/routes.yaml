@@ -1,0 +1,6 @@
+collections:
+  updates: /update/{year}/{month}/{slug}
+routes:
+  /pdf/{update_id}:
+    layout: newsletter
+

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<!--
+	Transit by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>{{ title or site_title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {{ theme:css src="thailand2" tag="true"}}
+		{{ theme:css src="custom" tag="true"}}
+		{{ theme:css src="scw-icons" tag="true"}}
+
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="/" class="logo"><img src="{{ theme:asset src="img/thailandLogo.svg" }}" alt="Gospel to Thailand" ></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Nav -->
+					<nav id="menu">
+						<ul class="links">
+								<li><a href="/">Home</a></li>
+								{{nav from="/" max_depth="2"  hide_from_main_menu:isnt="true"}}
+								<li><a href="{{url}}">{{title}}</a></li>
+								{{/nav}}
+								<li><a href="elements.html">Updates &amp; Prayer Letters</a></li>
+						</ul>
+						<ul class="actions vertical">
+							<li><a href="https://www.paypal.com/donate/?token=EBM5JFnOh-em8N6BlQxeJvTAmnHBZejgXxFdVoE163RB6HGy7uGVc7-ISiRg9uqdtmYgUG&country.x=US&locale.x=US" target="blank" class="button special fit">Give</a></li>
+							<li><a href="/contact-us" class="button fit">Contact Us</a></li>
+						</ul>
+					</nav>
+
+                    {{ template_content }}
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy;2018 <a href="http://rowandtable.com">Row&amp;Table</a>. Al rights reserved.</p>
+						<ul class="icons">
+							{{if social_links:twitter_url}}
+							<li><a href="{{ social_links:twitter_url }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							{{/if}}
+							{{if social_links:facebook_url}}
+							<li><a href="{{ social_links:facebook_url }}" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							{{/if}}
+							{{if social_links:instagram_url}}
+							<li><a href="{{ social_links:instagram_url }}" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							{{/if}}
+							{{if social_links:youtube_url}}
+							<li><a href="{{ social_links:youtube_url }}" class="icon fa-youtube"><span class="label">Youtube</span></a></li>
+							{{/if}}
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+            {{theme:js src="jquery.min" tag="true"}}
+            {{theme:js src="jquery.scrolly.min" tag="true"}}
+            {{theme:js src="skel.min" tag="true"}}
+            {{theme:js src="util" tag="true"}}
+            {{theme:js src="main" tag="true"}}
+
+	</body>
+</html>

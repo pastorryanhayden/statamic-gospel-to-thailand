@@ -1,0 +1,123 @@
+
+				<!-- Banner -->
+                <section id="banner">
+                    <div class="image filtered" data-position="center">
+                        <img src="{{theme:asset src="img/pic01.jpg"}}" alt="" />
+                    </div>
+                    <div class="content">
+                        <h1>The Hernandez Family</h1>
+                        <p>Church planting missionaries in Thailand.</p>
+                        <ul class="actions">
+                            <li><a href="#first" class="button wide scrolly">Learn More</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            <!-- Section -->
+                <section id="first" class="main special">
+                    <h2>Sharing the Gospel...</h2>
+                    <p>...in a nation of over 60,000,000 people where less than 1% know Christ.</p>
+
+                    <!-- Note: If you have an odd number of icons, change the class below to "features odd" -->
+                    <ul class="features">
+                        <li><a href="/media">
+                            <span class="icon major fa-video-camera"></span>
+                            <h3>Watch <br>Our Video</h3>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="/about-thailand">
+                            <span class="icon major fa-globe"></span>
+                            <h3>Learn About <br>Thailand</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/get-involved">
+                            <span class="icon major fa-plane"></span>
+                            <h3>Plan A <br>Missions Trip</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/get-involved">
+                            <span class="icon major fa-paypal"></span>
+                            <h3>Give to <br>Our Mission</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+            <!-- Spotlight -->
+                <section class="main spotlight left invert accent1">
+                    <div class="image filtered" data-position="center">
+                        <img src="{{theme:asset src='img/pic02.jpg'}}" alt="" />
+                    </div>
+                    <div class="content">
+                        <h2>How &amp; Why</h2>
+                        <p>did a normal family from the south end up in Thailand?</p>
+                        <ul class="actions">
+                            <li><a href="/about-our-family" class="button">Read our story</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            <!-- Section -->
+                <section class="main special">
+                    <h2>Get Updated</h2>
+                    <p>Read our latest prayer letters.</p>
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            {{ collection from="updates" sort="date:desc" limit="5" paginate="true" as="posts"}}
+                            {{posts}}
+                            <article>
+                                <a href="{{ permalink }}" class="image filtered">
+                                    {{if featured_image }}
+                                    <img src="{{featured_image}}" alt="" />
+                                    {{ else }}
+                                    <img src="{{ site_url }}/assets/img/update.jpg" alt="" />
+                                    {{ /if }}
+                                </a>
+                                <div class="content">
+                                    <p>{{title}}</p>
+                                </div>
+                            </article>
+                            {{/posts}}
+                            {{ /collection }}
+]                        </div>
+                    </div>
+                </section>
+
+            <!-- Section -->
+                <section class="main special invert accent3">
+                    <h2>Get our prayer letters</h2>
+                    <p>We'll send you email updates so you can pray for us.</p>
+                    <form method="post" action="#" class="combined">
+                        <input type="email" name="email" value="" placeholder="Your email address" />
+                        <button type="submit" class="special">Sign Up</button>
+                    </form>
+                </section>
+
+            <!-- Section -->
+                <section class="main special">
+                    <h2>Get in touch</h2>
+                    <p>How to contact us on the home and on the field.</p>
+                    <ul class="contact-icons">
+                        <li>
+                            <span class="icon major alt fa-envelope-o"></span>
+                            <p><a href="#">ahmet@gospeltothailand.com</a></p>
+                        </li>
+                        <li>
+                            <span class="icon major alt fa-map-o"></span>
+                            <p>Ahmet & Rachael Hernandez <br>
+                               358 Sukhumvit Garden City<br>
+                               Sukhumvit Soi 79<br>
+                               Prakhanong 10110<br>
+                               Bangkok, Thailand</p>
+                        </li>
+                        <li>
+                            <span class="icon major alt fa-mobile"></span>
+                            <p>(225)286-9085 <br>
+                            <em>This is an internet number.  You won't be charged for an international call.</em></p>
+                        </li>
+                    </ul>
+                </section>
+

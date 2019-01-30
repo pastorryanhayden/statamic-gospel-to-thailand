@@ -1,0 +1,37 @@
+taxonomies: false
+title: Home
+create_title: Home
+hide: true
+fields:
+  heading:
+    type: markdown
+    display: Heading
+    instructions: Change the heading here
+    cheatsheet: true
+    validate: required
+    default: 'The Hernandez Family <br> <span>Church planting missionaries in Thailand</span>'
+  family_image:
+    type: assets
+    display: Family Image
+    instructions: 'Change your family image here.  It needs to be a transparent png file.'
+    container: main
+    folder: img
+    max_files: 1
+  background_image:
+    type: assets
+    display: background image
+    instructions: Add the background image here
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+  button_text:
+    type: text
+    display: Button Text
+    instructions: Change the button text here.
+    width: 25
+    default: Learn More
+  social_links:
+    type: partial
+    display: Social Links
+    fieldset: social
